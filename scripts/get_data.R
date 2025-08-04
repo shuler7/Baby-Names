@@ -56,7 +56,3 @@ get_data <- function(region, sex, with_ranks = FALSE) {
   
   return(df)
 }
-
-
-
-
