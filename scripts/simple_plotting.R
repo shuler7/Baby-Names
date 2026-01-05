@@ -3,11 +3,11 @@ library(tidyverse)
 # simple plot
 
 simple_plot(
-  names = c('Jennifer'),
-  sexes = c('F'),
-  region = c('USA', 'EWS'),
-  start_year = 1996,
-  end_year = 2024
+  names = c('Leslie', 'Leslie'),
+  sexes = c('F', 'M'),
+  region = c('USA'),
+  start_year = 1910,
+  end_year = 1970
 )
 
 #################################################################
@@ -41,13 +41,15 @@ simple_plot <- function (names, sexes, regions, start_year, end_year){
              ) |>
     mutate(name_sex_region = paste(region, name, sex, sep = "/"))
   
-  ggplot(df, aes(x = year, y = 100*proportion, color = name_sex_region)) +
+  ggplot(df, aes(x = year, y =proportion, color = name_sex_region)) +
     geom_line(linewidth = 1)+
     theme_minimal()+
+    scale_y_continuous(labels = scales::percent)+
     labs(
       y = "Percentage",
       x = "Year",
-      color = "Region"
+      color = "Region",
+      title = "Baby Name Percentages over Time"
     )
 } 
 
