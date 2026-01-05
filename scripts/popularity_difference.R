@@ -27,7 +27,7 @@ df <- bind_rows(
   mutate(diff_prop = avg_prop_r1 - avg_prop_r2,
          diff_total = total_count_r1 - total_count_r2,
          pct_diff = avg_prop_r1 / avg_prop_r2,
-         prob_from_r1 = total_count_r1 / (total_count_r2 + total_count_r1))
+         prob_from_r1 = total_count_r1 / (total_count_r2))
 
 df <- arrange(df, desc(prob_from_r1), desc(total_count_r1))
 

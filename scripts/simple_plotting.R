@@ -1,10 +1,12 @@
+library(tidyverse)
+
 # simple plot
 
 simple_plot(
-  names = c('Leslie', 'Leslie'),
-  sexes = c('M', 'F'),
-  region = c('USA'),
-  start_year = 1910,
+  names = c('Jennifer'),
+  sexes = c('F'),
+  region = c('USA', 'EWS'),
+  start_year = 1996,
   end_year = 2024
 )
 

@@ -6,7 +6,7 @@
 library(tidyverse)
 
 rank_plot(
-  name = "Karen",
+  my_name = "Karen",
   sex = "F",
   region = "USA",
   start_year = 1910,
@@ -15,7 +15,7 @@ rank_plot(
 )
 
 ########################################################
-rank_plot <- function(name,
+rank_plot <- function(my_name,
                       sex,
                       region,
                       start_year,
